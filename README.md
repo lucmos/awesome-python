@@ -10,7 +10,6 @@ An **opinionated selection** of awesome python stuff.
     - [imageio](#imageio)
     - [loguru](#loguru)
     - [pendulum](#pendulum)
-    - [PrettyErrors](#prettyerrors)
     - [pydantic](#pydantic)
     - [python-dotenv](#python-dotenv)
     - [questionary](#questionary)
@@ -112,13 +111,6 @@ Python datetimes made easy.
 '2013-03-31T03:00:00+02:00'
 ```
 
-
-### [PrettyErrors](https://github.com/onelivesleft/PrettyErrors)
-Prettifies Python exception output to make it legible.
-
-[![](https://raw.githubusercontent.com/onelivesleft/PrettyErrors/master/example.png)](https://github.com/onelivesleft/PrettyErrors)
-
-
 ### [pydantic](https://github.com/samuelcolvin/pydantic)
 Data validation and settings management using Python type hinting.
 
@@ -162,34 +154,20 @@ Questionary is a Python library for effortlessly building pretty command line in
 
 [![](https://raw.githubusercontent.com/tmbo/questionary/master/docs/images/example.gif)](https://github.com/tmbo/questionary)
 
-```python
-import questionary
-
-questionary.text("What's your first name").ask()
-questionary.password("What's your secret?").ask()
-questionary.confirm("Are you amazed?").ask()
-
-questionary.select(
-    "What do you want to do?",
-    choices=["Order a pizza", "Make a reservation", "Ask for opening hours"],
-).ask()
-
-questionary.rawselect(
-    "What do you want to do?",
-    choices=["Order a pizza", "Make a reservation", "Ask for opening hours"],
-).ask()
-
-questionary.checkbox(
-    "Select toppings", choices=["foo", "bar", "bazz"]
-).ask()
-
-questionary.path("Path to the projects version file").ask()
-```
 
 ### [rich](https://github.com/willmcgugan/rich)
 Rich is a Python library for rich text and beautiful formatting in the terminal.
 
+1. Rich output:
 [![](https://github.com/willmcgugan/rich/raw/master/imgs/features.png)](https://github.com/willmcgugan/rich)
+
+2. Rich tracebacks:
+[![](./pics/rich-traceback.png)](https://github.com/willmcgugan/rich)
+
+3. Rich REPL:
+[![](https://github.com/willmcgugan/rich/raw/master/imgs/repl.png)](https://github.com/willmcgugan/rich)
+
+4. Basic prompts support
 
 ### [scikit-image](https://github.com/scikit-image/scikit-image)
 `scikit-image` is an image processing Python package that works with `numpy` arrays.
