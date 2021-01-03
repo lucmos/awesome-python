@@ -13,12 +13,12 @@ An **opinionated selection** of awesome python stuff.
     - [PrettyErrors](#prettyerrors)
     - [pydantic](#pydantic)
     - [python-dotenv](#python-dotenv)
-    - [python-fire](#python-fire)
     - [questionary](#questionary)
     - [rich](#rich)
     - [scikit-image](#scikit-image)
     - [sensor-sensor](#sensor-sensor)
     - [tqdm](#tqdm)
+    - [Typer](#typer)
   - [Tools](#tools)
     - [black](#black)
     - [scalene](#scalene)
@@ -157,27 +157,6 @@ load_dotenv()  # take environment variables from .env.
 # `os.getenv`) as if they came from the actual environment.
 ```
 
-### [python-fire](https://github.com/google/python-fire)
-Python Fire is a library for automatically generating command line interfaces (CLIs) from absolutely any Python object.
-
-```python
-import fire
-
-class Calculator(object):
-  """A simple calculator class."""
-
-  def double(self, number):
-    return 2 * number
-
-if __name__ == '__main__':
-  fire.Fire(Calculator)
-```
-
-```bash
-python calculator.py double 10  # 20
-python calculator.py double --number=15  # 30
-```
-
 ### [questionary](https://github.com/tmbo/questionary)
 Questionary is a Python library for effortlessly building pretty command line interfaces
 
@@ -237,6 +216,35 @@ Instantly make your loops show a smart progress meter - just wrap any iterable w
 
 [![](https://raw.githubusercontent.com/tqdm/tqdm/master/images/tqdm.gif)](https://github.com/tqdm/tqdm)
 
+### [Typer](https://github.com/tiangolo/typer)
+Typer is a library for building CLI applications that users will love using and developers will love creating. Based on Python 3.6+ type hints.
+
+```python
+import typer
+
+
+def main(name: str):
+    typer.echo(f"Hello {name}")
+
+
+if __name__ == "__main__":
+    typer.run(main)
+```
+```bash
+// You get a --help for free
+$ python main.py --help
+
+Usage: main.py [OPTIONS] NAME
+
+Arguments:
+  NAME  [required]
+
+Options:
+  --install-completion  Install completion for the current shell.
+  --show-completion     Show completion for the current shell, to copy it or customize the installation.
+  --help                Show this message and exit.
+
+```
 
 ## Tools
 
